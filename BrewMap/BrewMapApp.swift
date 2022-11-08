@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GoogleMaps
 
 @main
 struct BrewMapApp: App {
@@ -14,6 +15,7 @@ struct BrewMapApp: App {
     
     
     init() {
+        GMSServices.provideAPIKey(apiKey)
         let navBarAppearance = UINavigationBarAppearance()
         
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "NavigationBarTitle") ?? UIColor.systemRed, .font: UIFont(name: "ArialRoundedMTBold", size: 35)!]

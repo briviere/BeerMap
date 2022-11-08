@@ -6,12 +6,35 @@
 //
 
 import SwiftUI
+import GoogleMaps
 
 struct BreweryDetailView: View {
-    var brewery: Brewery
+    @ObservedObject var brewery: Brewery
+    
     @Environment(\.dismiss) var dismiss
+    
     @State private var showReview = false
     @State private var showNewRestaurant = false
+    
+    @State var zoomInCenter: Bool = false
+    @State var expandList: Bool = false
+    @State var selectedMarker: GMSMarker?
+    @State var yDragTranslation: CGFloat = 0
+    
+    static let cities = [
+      City(name: "San Francisco", coordinate: CLLocationCoordinate2D(latitude: 37.7576, longitude: -122.4194)),
+      City(name: "Seattle", coordinate: CLLocationCoordinate2D(latitude: 47.6131742, longitude: -122.4824903)),
+      City(name: "Singapore", coordinate: CLLocationCoordinate2D(latitude: 1.3440852, longitude: 103.6836164)),
+      City(name: "Sydney", coordinate: CLLocationCoordinate2D(latitude: -33.8473552, longitude: 150.6511076)),
+      City(name: "Tokyo", coordinate: CLLocationCoordinate2D(latitude: 35.6684411, longitude: 139.6004407))
+    ]
+    
+    /// State for markers displayed on the map for each city in `cities`
+    @State var markers: [GMSMarker] = cities.map {
+      let marker = GMSMarker(position: $0.coordinate)
+      marker.title = $0.name
+      return marker
+    }
     
     @Environment(\.managedObjectContext) var context
     
@@ -100,10 +123,18 @@ struct BreweryDetailView: View {
             
             NavigationLink(
                 destination:
-                    MapView(location: brewery.location)
+                    //MapView(location: brewery.location)
+                MapContainerView(zoomInCenter: $zoomInCenter, markers: $markers, selectedMarker: $selectedMarker, location: $brewery.location)
                     .edgesIgnoringSafeArea(.all)
             ) {
-                MapView(location: brewery.location)
+//                MapView(location: brewery.location)
+//                    .frame(minWidth: 0, maxWidth: .infinity)
+//                    .frame(height: 200)
+//                    .cornerRadius(20)
+//                    .padding()
+                
+                   
+                  MapContainerView(zoomInCenter: $zoomInCenter, markers: $markers, selectedMarker: $selectedMarker, location: $brewery.location)
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .frame(height: 200)
                     .cornerRadius(20)
@@ -133,6 +164,67 @@ struct BreweryDetailView: View {
             }
             : nil
         )
+    }
+    
+    struct MapContainerView: View {
+
+      
+      @Binding var zoomInCenter: Bool
+      @Binding var markers: [GMSMarker]
+      @Binding var selectedMarker: GMSMarker?
+      @Binding var location: String
+
+      var body: some View {
+        GeometryReader { geometry in
+            
+          let diameter = zoomInCenter ? geometry.size.width : (geometry.size.height * 2)
+                  
+          MapViewControllerBridge(markers: $markers, selectedMarker: $selectedMarker, onAnimationEnded: {
+                      self.zoomInCenter = true
+          }, mapViewWillMove: { (isGesture) in
+              guard isGesture else { return }
+              self.zoomInCenter = false
+            })
+          .clipShape(
+            Circle()
+              .size(
+                width: diameter,
+                height: diameter
+              )
+              .offset(
+                CGPoint(
+                  x: (geometry.size.width - diameter) / 2,
+                  y: (geometry.size.height - diameter) / 2
+                )
+              )
+          )
+          .animation(.easeIn)
+          .background(Color(red: 254.0/255.0, green: 1, blue: 220.0/255.0))
+          .task {
+              getLatLngForAddress(address: location)
+          }
+        }
+      }
+        
+      func getLatLngForAddress(address: String) {
+            let formattedAddress = address.replacingOccurrences(of: " ", with: "+")
+            
+            //https://maps.googleapis.com/maps/api/geocode/json?address=G/F,%2072%20Po%20Hing%20Fong,%20Sheung%20Wan,%20Hong%20Kong&key=AIzaSyBz8MnayGs3g95WbIF6DqhVq0Fi5bw1_QM
+            let url = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?address=\(formattedAddress)&key=\(apiKey)")
+            let data = try! Data(contentsOf: url!)
+            let json = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
+            if let result = json["results"] as? [[String: Any]] {
+                if let geometry = result[0]["geometry"] as? [String: Any] {
+                    if let location = geometry["location"] as? [String: Any] {
+                        let latitude = location["lat"] as! NSNumber
+                        let longitude = location["lng"] as! NSNumber
+                        print("\nlatitude: \(latitude), longitude: \(longitude)")
+                        selectedMarker = GMSMarker(position: CLLocationCoordinate2D(latitude:  CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude)))
+                        
+                    }
+                }
+            }
+        }
     }
 }
 
