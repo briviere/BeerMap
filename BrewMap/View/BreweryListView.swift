@@ -40,10 +40,22 @@ struct BreweryListView: View {
                     .listRowSeparator(.hidden)
                 }
             }
+            .listStyle(.plain)
+            .navigationTitle("FoodPin")
+            .navigationBarTitleDisplayMode(.automatic)
+            .toolbar {
+                Button(action: {
+                    self.showNewBrewery = true
+                }) {
+                    Image(systemName: "plus")
+                }
+            }
         }
+        .accentColor(.primary)
         .sheet(isPresented: $showNewBrewery) {
             NewBreweryView()
         }
+       
     }
     
     private func deleteRecord(indexSet: IndexSet) {

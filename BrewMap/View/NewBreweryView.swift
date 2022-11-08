@@ -16,6 +16,8 @@ struct NewBreweryView: View {
     
     @Environment(\.dismiss) var dismiss
     
+    @Environment(\.managedObjectContext) var context
+    
     enum PhotoSource: Identifiable {
         case photoLibrary
         case camera
@@ -67,10 +69,16 @@ struct NewBreweryView: View {
                             .accentColor(.primary)
                     }
                 }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Text("Save")
-                        .font(.headline)
-                        .foregroundColor(Color("NavigationBarTitle"))
+                    Button(action: {
+                        save()
+                        dismiss()
+                    }) {
+                        Text("Save")
+                            .font(.headline)
+                            .foregroundColor(Color("NavigationBarTitle"))
+                    }
                 }
             }
         }
@@ -91,6 +99,23 @@ struct NewBreweryView: View {
             case .photoLibrary: ImagePicker(sourceType: .photoLibrary, selectedImage: $breweryFormViewModel.image).ignoresSafeArea()
             case .camera: ImagePicker(sourceType: .camera, selectedImage: $breweryFormViewModel.image).ignoresSafeArea()
             }
+        }
+    }
+    
+    private func save() {
+        let brewery = Brewery(context: context)
+        brewery.name = breweryFormViewModel.name
+        brewery.type = breweryFormViewModel.type
+        brewery.location = breweryFormViewModel.location
+        brewery.phone = breweryFormViewModel.phone
+        brewery.image = breweryFormViewModel.image.pngData()!
+        brewery.summary = breweryFormViewModel.description
+        brewery.isFavorite = false
+        do {
+            try context.save()
+        } catch {
+            print("Failed to save the record...")
+            print(error.localizedDescription)
         }
     }
 }

@@ -13,6 +13,8 @@ struct BreweryDetailView: View {
     @State private var showReview = false
     @State private var showNewRestaurant = false
     
+    @Environment(\.managedObjectContext) var context
+    
     var body: some View {
         ScrollView {
             HStack(alignment: .bottom) {
@@ -69,10 +71,15 @@ struct BreweryDetailView: View {
                         }
                     }
                 }
+                .onChange(of: brewery) { _ in
+                    if self.context.hasChanges {
+                        try? self.context.save()
+                    }
+                }
             }
            
             
-            Text(brewery.description)
+            Text(brewery.summary)
             .padding()
             
             HStack(alignment: .top) {
