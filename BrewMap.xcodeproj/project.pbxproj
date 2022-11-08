@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		959102442917397B00594377 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959102432917397B00594377 /* ReviewView.swift */; };
+		95C2B961291897D200C9EB5B /* NewBreweryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2B960291897D200C9EB5B /* NewBreweryView.swift */; };
+		95C2B9642918A46300C9EB5B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2B9632918A46300C9EB5B /* ImagePicker.swift */; };
+		95C2B9A72918B77B00C9EB5B /* BrewMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95C2B9A52918B77B00C9EB5B /* BrewMap.xcdatamodeld */; };
+		95C2B9A92918B84700C9EB5B /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2B9A82918B84700C9EB5B /* PersistenceController.swift */; };
+		95C2B9AC2918C67800C9EB5B /* BreweryFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2B9AB2918C67800C9EB5B /* BreweryFormViewModel.swift */; };
+		95D377D3291348C800829D8C /* BrewMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D377D2291348C800829D8C /* BrewMapApp.swift */; };
+		95D377D7291348C900829D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D377D6291348C900829D8C /* Assets.xcassets */; };
+		95D377DA291348C900829D8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D377D9291348C900829D8C /* Preview Assets.xcassets */; };
+		95D377E329134A1D00829D8C /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D377E229134A1D00829D8C /* Brewery.swift */; };
+		95D377E529134A6500829D8C /* BreweryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D377E429134A6500829D8C /* BreweryListView.swift */; };
+		95D377E729134EBA00829D8C /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D377E629134EBA00829D8C /* ActivityView.swift */; };
+		95D377E92913537C00829D8C /* BreweryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D377E82913537C00829D8C /* BreweryDetailView.swift */; };
+		95D377F12914735500829D8C /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D377F02914735500829D8C /* UIColor+Ext.swift */; };
+		95D377F32914786200829D8C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D377F22914786200829D8C /* MapView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		959102432917397B00594377 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		95C2B960291897D200C9EB5B /* NewBreweryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBreweryView.swift; sourceTree = "<group>"; };
+		95C2B9632918A46300C9EB5B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		95C2B9A62918B77B00C9EB5B /* BrewMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrewMap.xcdatamodel; sourceTree = "<group>"; };
+		95C2B9A82918B84700C9EB5B /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		95C2B9AB2918C67800C9EB5B /* BreweryFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryFormViewModel.swift; sourceTree = "<group>"; };
+		95D377CF291348C800829D8C /* BrewMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D377D2291348C800829D8C /* BrewMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewMapApp.swift; sourceTree = "<group>"; };
+		95D377D6291348C900829D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D377D9291348C900829D8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95D377E229134A1D00829D8C /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
+		95D377E429134A6500829D8C /* BreweryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryListView.swift; sourceTree = "<group>"; };
+		95D377E629134EBA00829D8C /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		95D377E82913537C00829D8C /* BreweryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryDetailView.swift; sourceTree = "<group>"; };
+		95D377EC29135B8B00829D8C /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		95D377ED29135BA200829D8C /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		95D377EE29135C6C00829D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		95D377F02914735500829D8C /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		95D377F22914786200829D8C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95D377CC291348C800829D8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95C2B9622918A42800C9EB5B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				95C2B9632918A46300C9EB5B /* ImagePicker.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		95C2B9AA2918C62B00C9EB5B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				95C2B9AB2918C67800C9EB5B /* BreweryFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		95D377C6291348C800829D8C = {
+			isa = PBXGroup;
+			children = (
+				95C2B9A52918B77B00C9EB5B /* BrewMap.xcdatamodeld */,
+				95D377D1291348C800829D8C /* BrewMap */,
+				95D377D0291348C800829D8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95D377D0291348C800829D8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95D377CF291348C800829D8C /* BrewMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95D377D1291348C800829D8C /* BrewMap */ = {
+			isa = PBXGroup;
+			children = (
+				95C2B9AA2918C62B00C9EB5B /* ViewModel */,
+				95C2B9622918A42800C9EB5B /* Util */,
+				95D377EF2914732B00829D8C /* Extensions */,
+				95D377EE29135C6C00829D8C /* Info.plist */,
+				95D377EA29135ADE00829D8C /* Resources */,
+				95D377E12913490200829D8C /* View */,
+				95D377E0291348F300829D8C /* Model */,
+				95D377D2291348C800829D8C /* BrewMapApp.swift */,
+				95D377D6291348C900829D8C /* Assets.xcassets */,
+				95D377D8291348C900829D8C /* Preview Content */,
+			);
+			path = BrewMap;
+			sourceTree = "<group>";
+		};
+		95D377D8291348C900829D8C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				95D377D9291348C900829D8C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		95D377E0291348F300829D8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95D377E229134A1D00829D8C /* Brewery.swift */,
+				95C2B9A82918B84700C9EB5B /* PersistenceController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95D377E12913490200829D8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95D377E429134A6500829D8C /* BreweryListView.swift */,
+				95D377E629134EBA00829D8C /* ActivityView.swift */,
+				95D377E82913537C00829D8C /* BreweryDetailView.swift */,
+				95D377F22914786200829D8C /* MapView.swift */,
+				959102432917397B00594377 /* ReviewView.swift */,
+				95C2B960291897D200C9EB5B /* NewBreweryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95D377EA29135ADE00829D8C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				95D377EB29135B0F00829D8C /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		95D377EB29135B0F00829D8C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				95D377EC29135B8B00829D8C /* Nunito-Bold.ttf */,
+				95D377ED29135BA200829D8C /* Nunito-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		95D377EF2914732B00829D8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				95D377F02914735500829D8C /* UIColor+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95D377CE291348C800829D8C /* BrewMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D377DD291348C900829D8C /* Build configuration list for PBXNativeTarget "BrewMap" */;
+			buildPhases = (
+				95D377CB291348C800829D8C /* Sources */,
+				95D377CC291348C800829D8C /* Frameworks */,
+				95D377CD291348C800829D8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrewMap;
+			productName = BrewMap;
+			productReference = 95D377CF291348C800829D8C /* BrewMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95D377C7291348C800829D8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					95D377CE291348C800829D8C = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 95D377CA291348C800829D8C /* Build configuration list for PBXProject "BrewMap" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95D377C6291348C800829D8C;
+			productRefGroup = 95D377D0291348C800829D8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95D377CE291348C800829D8C /* BrewMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95D377CD291348C800829D8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D377DA291348C900829D8C /* Preview Assets.xcassets in Resources */,
+				95D377D7291348C900829D8C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95D377CB291348C800829D8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C2B9AC2918C67800C9EB5B /* BreweryFormViewModel.swift in Sources */,
+				959102442917397B00594377 /* ReviewView.swift in Sources */,
+				95C2B9A72918B77B00C9EB5B /* BrewMap.xcdatamodeld in Sources */,
+				95D377F32914786200829D8C /* MapView.swift in Sources */,
+				95C2B961291897D200C9EB5B /* NewBreweryView.swift in Sources */,
+				95D377E92913537C00829D8C /* BreweryDetailView.swift in Sources */,
+				95D377E329134A1D00829D8C /* Brewery.swift in Sources */,
+				95D377D3291348C800829D8C /* BrewMapApp.swift in Sources */,
+				95D377E729134EBA00829D8C /* ActivityView.swift in Sources */,
+				95C2B9642918A46300C9EB5B /* ImagePicker.swift in Sources */,
+				95C2B9A92918B84700C9EB5B /* PersistenceController.swift in Sources */,
+				95D377E529134A6500829D8C /* BreweryListView.swift in Sources */,
+				95D377F12914735500829D8C /* UIColor+Ext.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		95D377DB291348C900829D8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		95D377DC291348C900829D8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95D377DE291348C900829D8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BrewMap/Preview Content\"";
+				DEVELOPMENT_TEAM = 7AV53LZZE4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrewMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.bgrconsultinginc.BrewMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95D377DF291348C900829D8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BrewMap/Preview Content\"";
+				DEVELOPMENT_TEAM = 7AV53LZZE4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrewMap/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.bgrconsultinginc.BrewMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95D377CA291348C800829D8C /* Build configuration list for PBXProject "BrewMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D377DB291348C900829D8C /* Debug */,
+				95D377DC291348C900829D8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D377DD291348C900829D8C /* Build configuration list for PBXNativeTarget "BrewMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D377DE291348C900829D8C /* Debug */,
+				95D377DF291348C900829D8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		95C2B9A52918B77B00C9EB5B /* BrewMap.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				95C2B9A62918B77B00C9EB5B /* BrewMap.xcdatamodel */,
+			);
+			currentVersion = 95C2B9A62918B77B00C9EB5B /* BrewMap.xcdatamodel */;
+			path = BrewMap.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 95D377C7291348C800829D8C /* Project object */;
+}
