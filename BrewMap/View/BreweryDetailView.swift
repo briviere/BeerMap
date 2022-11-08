@@ -209,7 +209,6 @@ struct BreweryDetailView: View {
       func getLatLngForAddress(address: String) {
             let formattedAddress = address.replacingOccurrences(of: " ", with: "+")
             
-            //https://maps.googleapis.com/maps/api/geocode/json?address=G/F,%2072%20Po%20Hing%20Fong,%20Sheung%20Wan,%20Hong%20Kong&key=AIzaSyBz8MnayGs3g95WbIF6DqhVq0Fi5bw1_QM
             let url = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?address=\(formattedAddress)&key=\(apiKey)")
             let data = try! Data(contentsOf: url!)
             let json = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]

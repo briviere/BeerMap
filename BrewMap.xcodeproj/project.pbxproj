@@ -28,6 +28,7 @@
 		95021D62291A02830030D94C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95021D61291A02830030D94C /* City.swift */; };
 		95021D64291A05260030D94C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95021D63291A05260030D94C /* Constants.swift */; };
 		959102442917397B00594377 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959102432917397B00594377 /* ReviewView.swift */; };
+		95A62BE9291A8DCB00ECF232 /* LocalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A62BE8291A8DCB00ECF232 /* LocalConstants.swift */; };
 		95C2B961291897D200C9EB5B /* NewBreweryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2B960291897D200C9EB5B /* NewBreweryView.swift */; };
 		95C2B9642918A46300C9EB5B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2B9632918A46300C9EB5B /* ImagePicker.swift */; };
 		95C2B9A72918B77B00C9EB5B /* BrewMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95C2B9A52918B77B00C9EB5B /* BrewMap.xcdatamodeld */; };
@@ -66,6 +67,7 @@
 		95021D61291A02830030D94C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		95021D63291A05260030D94C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		959102432917397B00594377 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		95A62BE8291A8DCB00ECF232 /* LocalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalConstants.swift; sourceTree = "<group>"; };
 		95C2B960291897D200C9EB5B /* NewBreweryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBreweryView.swift; sourceTree = "<group>"; };
 		95C2B9632918A46300C9EB5B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		95C2B9A62918B77B00C9EB5B /* BrewMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrewMap.xcdatamodel; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				95C2B9632918A46300C9EB5B /* ImagePicker.swift */,
 				95021D63291A05260030D94C /* Constants.swift */,
+				95A62BE8291A8DCB00ECF232 /* LocalConstants.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				95C2B9A92918B84700C9EB5B /* PersistenceController.swift in Sources */,
 				95D377E529134A6500829D8C /* BreweryListView.swift in Sources */,
 				95021D60291A00B80030D94C /* MapViewControllerBridge.swift in Sources */,
+				95A62BE9291A8DCB00ECF232 /* LocalConstants.swift in Sources */,
 				95D377F12914735500829D8C /* UIColor+Ext.swift in Sources */,
 				95021D62291A02830030D94C /* City.swift in Sources */,
 				95021D5E291A00380030D94C /* MapViewController.swift in Sources */,
