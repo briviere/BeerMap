@@ -41,7 +41,7 @@ struct BreweryListView: View {
                 }
             }
             .listStyle(.plain)
-            .navigationTitle("FoodPin")
+            .navigationTitle("BrewMap")
             .navigationBarTitleDisplayMode(.automatic)
             .toolbar {
                 Button(action: {

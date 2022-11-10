@@ -124,7 +124,7 @@ struct BreweryDetailView: View {
             NavigationLink(
                 destination:
                     //MapView(location: brewery.location)
-                MapContainerView(zoomInCenter: $zoomInCenter, markers: $markers, selectedMarker: $selectedMarker, location: $brewery.location)
+                    MapContainerView(zoomInCenter: $zoomInCenter, markers: $markers, selectedMarker: $selectedMarker, location: $brewery.location)
                     .edgesIgnoringSafeArea(.all)
             ) {
 //                MapView(location: brewery.location)
@@ -185,19 +185,19 @@ struct BreweryDetailView: View {
               guard isGesture else { return }
               self.zoomInCenter = false
             })
-          .clipShape(
-            Circle()
-              .size(
-                width: diameter,
-                height: diameter
-              )
-              .offset(
-                CGPoint(
-                  x: (geometry.size.width - diameter) / 2,
-                  y: (geometry.size.height - diameter) / 2
-                )
-              )
-          )
+//          .clipShape(
+//            Circle()
+//              .size(
+//                width: diameter,
+//                height: diameter
+//              )
+//              .offset(
+//                CGPoint(
+//                  x: (geometry.size.width - diameter) / 2,
+//                  y: (geometry.size.height - diameter) / 2
+//                )
+//              )
+//          )
           .animation(.easeIn)
           .background(Color(red: 254.0/255.0, green: 1, blue: 220.0/255.0))
           .task {
