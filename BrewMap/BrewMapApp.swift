@@ -32,8 +32,9 @@ struct BrewMapApp: App {
     
     var body: some Scene {
         WindowGroup {
-            BreweryListView()
+            MainView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
              
         }
     }

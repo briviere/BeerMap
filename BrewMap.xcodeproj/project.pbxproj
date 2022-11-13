@@ -27,6 +27,9 @@
 		95021D60291A00B80030D94C /* MapViewControllerBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95021D5F291A00B80030D94C /* MapViewControllerBridge.swift */; };
 		95021D62291A02830030D94C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95021D61291A02830030D94C /* City.swift */; };
 		95021D64291A05260030D94C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95021D63291A05260030D94C /* Constants.swift */; };
+		9573FBCC291EBF140067B6C7 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9573FBCB291EBF140067B6C7 /* TutorialView.swift */; };
+		9573FBCE291EBF6A0067B6C7 /* TutorialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9573FBCD291EBF6A0067B6C7 /* TutorialPage.swift */; };
+		9573FBD0291ED2E10067B6C7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9573FBCF291ED2E10067B6C7 /* MainView.swift */; };
 		959102442917397B00594377 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959102432917397B00594377 /* ReviewView.swift */; };
 		95A62BE9291A8DCB00ECF232 /* LocalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A62BE8291A8DCB00ECF232 /* LocalConstants.swift */; };
 		95C2B961291897D200C9EB5B /* NewBreweryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C2B960291897D200C9EB5B /* NewBreweryView.swift */; };
@@ -66,6 +69,9 @@
 		95021D5F291A00B80030D94C /* MapViewControllerBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerBridge.swift; sourceTree = "<group>"; };
 		95021D61291A02830030D94C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		95021D63291A05260030D94C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9573FBCB291EBF140067B6C7 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		9573FBCD291EBF6A0067B6C7 /* TutorialPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPage.swift; sourceTree = "<group>"; };
+		9573FBCF291ED2E10067B6C7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		959102432917397B00594377 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		95A62BE8291A8DCB00ECF232 /* LocalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalConstants.swift; sourceTree = "<group>"; };
 		95C2B960291897D200C9EB5B /* NewBreweryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBreweryView.swift; sourceTree = "<group>"; };
@@ -219,6 +225,9 @@
 				95C2B960291897D200C9EB5B /* NewBreweryView.swift */,
 				95021D5D291A00380030D94C /* MapViewController.swift */,
 				95021D5F291A00B80030D94C /* MapViewControllerBridge.swift */,
+				9573FBCB291EBF140067B6C7 /* TutorialView.swift */,
+				9573FBCD291EBF6A0067B6C7 /* TutorialPage.swift */,
+				9573FBCF291ED2E10067B6C7 /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -320,10 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				95C2B9AC2918C67800C9EB5B /* BreweryFormViewModel.swift in Sources */,
+				9573FBD0291ED2E10067B6C7 /* MainView.swift in Sources */,
 				959102442917397B00594377 /* ReviewView.swift in Sources */,
+				9573FBCE291EBF6A0067B6C7 /* TutorialPage.swift in Sources */,
 				95C2B9A72918B77B00C9EB5B /* BrewMap.xcdatamodeld in Sources */,
 				95D377F32914786200829D8C /* MapView.swift in Sources */,
 				95C2B961291897D200C9EB5B /* NewBreweryView.swift in Sources */,
+				9573FBCC291EBF140067B6C7 /* TutorialView.swift in Sources */,
 				95D377E92913537C00829D8C /* BreweryDetailView.swift in Sources */,
 				95D377E329134A1D00829D8C /* Brewery.swift in Sources */,
 				95D377D3291348C800829D8C /* BrewMapApp.swift in Sources */,

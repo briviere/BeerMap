@@ -15,6 +15,11 @@ struct BreweryListView: View {
     var brewerys: FetchedResults<Brewery>
     
     @State private var showNewBrewery = false
+    @State private var searchText = ""
+    
+    @State private var showWalkthrough = false
+    
+    @AppStorage("hasViewedWalkthrough") var hasViewedWalkthrough: Bool = false
     
     @Environment(\.managedObjectContext) var context
     
@@ -51,9 +56,23 @@ struct BreweryListView: View {
                 }
             }
         }
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search brewerys...") {
+            Text("Craft").searchCompletion("Craft")
+            Text("Beer").searchCompletion("Brew")
+        }
         .accentColor(.primary)
         .sheet(isPresented: $showNewBrewery) {
             NewBreweryView()
+        }
+        .sheet(isPresented: $showWalkthrough) {
+            TutorialView()
+        }
+        .onChange(of: searchText) { searchText in
+            let predicate = searchText.isEmpty ? NSPredicate(value: true) : NSPredicate(format: "name CONTAINS[c] %@", searchText)
+            brewerys.nsPredicate = predicate
+        }
+        .onAppear() {
+            showWalkthrough = hasViewedWalkthrough ? false : true
         }
        
     }
